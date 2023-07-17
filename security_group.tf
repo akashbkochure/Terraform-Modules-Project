@@ -1,6 +1,7 @@
 resource "aws_security_group" "ec2_sg" {
   name        = "EC2SecurityGroup"
   description = "Security group for EC2 instance"
+  vpc_id = aws_vpc.my-vpc.id
 
   ingress {
     from_port   = 22
